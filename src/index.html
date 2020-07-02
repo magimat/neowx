@@ -322,21 +322,6 @@
 
             <div class="col col-4 crd">
         
-                <h4><i class="wi wi-windy"></i> $Extras.Translation.wind_chill</h4>
-                <div class="crd-content">
-                    <span class="weatherdata-med">$current.windchill</span>
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.low:</td>
-                            <td>$day.windchill.min</td>
-                            <td>($day.windchill.mintime.format("%H:%M"))</td>
-                        </tr>
-                    </table>
-                </div>
-
-            </div>
-            <div class="col col-4 crd">
-
                 <h4><i class="wi wi-thermometer-exterior"></i> $Extras.Translation.dewpoint</h4>
                 <div class="crd-content">
                     <span class="weatherdata-med">$current.dewpoint</span>
@@ -353,18 +338,43 @@
                         </tr>
                     </table>
                 </div>
+    
+            </div>
+            <div class="col col-4 crd">
+
+                <h4><i class="wi wi-thermometer-exterior"></i> $Extras.Translation.appTemp</h4>
+                <div class="crd-content">
+                    <span class="weatherdata-large">$current.appTemp</span>
+                    <table class="meta">
+                        <tr>
+                            <td>$Extras.Translation.high:</td>
+                            <td>$day.appTemp.max</td>
+                            <td>($day.appTemp.maxtime.format("%H:%M"))</td>
+                        </tr>
+                        <tr>
+                            <td>$Extras.Translation.low:</td>
+                            <td>$day.appTemp.min</td>
+                            <td>($day.appTemp.mintime.format("%H:%M"))</td>
+                        </tr>
+                    </table>
+                </div>
 
             </div>
             <div class="col col-4 crd">
 
-                <h4><i class="wi wi-fire"></i> $Extras.Translation.heat_index</h4>
+                <h4><i class="wi wi-umbrella"></i> $Extras.Translation.rain</h4>
                 <div class="crd-content">
-                    <span class="weatherdata-med">$current.heatindex</span>
+                    <span class="weatherdata">$day.rain.sum</span>
                     <table class="meta">
                         <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$day.heatindex.max</td>
-                            <td>($day.heatindex.maxtime.format("%H:%M"))</td>
+                            <td>$Extras.Translation.rain_rate:</td>
+                            <td>$current.rainRate</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Hi $Extras.Translation.rain_rate:</td>
+                            <td>$day.rainRate.max</td>
+                            <td>($day.rainRate.maxtime.format("%H:%M"))</td>
                         </tr>
                     </table>
                 </div>
