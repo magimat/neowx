@@ -174,12 +174,15 @@ main {
     padding: .4rem .75rem;
 
     .weatherdata {
-      font-size: 1.4rem;
+      font-size: 2.8rem;
       color: #000;
       font-weight: 500;
       width: 100%;
       text-align: center;
       display: block;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      
 
       i {
         text-align: center;
@@ -197,6 +200,46 @@ main {
       text-align: center;
       display: block;
     }
+
+    .weatherdata-large {
+      font-size: 3.5rem;
+      color: #000;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      display: block;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      
+
+      i {
+        text-align: center;
+        width: 1.6em;
+        height: 1.4em;
+        font-size: 1.6em;
+      }
+    }
+
+
+    .weatherdata-med {
+      font-size: 2.4rem;
+      color: #000;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      display: block;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      
+
+      i {
+        text-align: center;
+        width: 1.6em;
+        height: 1.4em;
+        font-size: 1.6em;
+      }
+    }
+
 
     .weatherdata_sub {
       font-size: .95rem;

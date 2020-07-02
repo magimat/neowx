@@ -23,5 +23,8 @@
     "gulp-sass": "*",
     "gulp-uglify": "*",
     "gulp-rename": "*"
+  },
+  "dependencies": {
+    "natives": "^1.1.6"
   }
 }

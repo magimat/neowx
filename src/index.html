@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="$Extras.Translation.language">
 <head>
+    <meta http-equiv="refresh" content="300"/>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -152,7 +153,7 @@
 
         <!-- Main data -->
         <div class="row gutters row-gutters">
-            <div class="col col-9">
+            <div class="col col-12">
 
                 <div class="row gutters row-gutters">
                     <div class="col col-4 crd">
@@ -160,7 +161,7 @@
                         <h4><i class="wi wi-thermometer"></i> $Extras.Translation.out_temp</h4>
 
                         <div class="crd-content">
-                            <span class="weatherdata">$current.outTemp</span>
+                            <span class="weatherdata-large">$current.outTemp</span>
                             <table class="meta">
                                 <tr>
                                     <td>$Extras.Translation.high:</td>
@@ -176,6 +177,61 @@
                         </div>
 
                     </div>
+
+
+                    <div class="col col-4 crd">
+
+                        <h4><i class="wi wi-barometer"></i> $Extras.Translation.barometer</h4>
+                        <div class="crd-content">
+                            <span class="weatherdata-med">$current.barometer</span>
+                            <table class="meta">
+                                <tr>
+                                    <td>$Extras.Translation.baro_trend:</td>
+                                    <td>$trend.barometer</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+        
+                    </div>
+
+                    
+
+                    <div class="col col-4 crd">
+
+                        <h4><i class="wi wi-thermometer"></i> $Extras.Translation.inside_temp</h4>
+                        <div class="crd-content">
+                            <span class="weatherdata-large">$current.inTemp</span>
+                            <table class="meta">
+                                <tr>
+                                    <td>$Extras.Translation.high:</td>
+                                    <td>$day.inTemp.max</td>
+                                    <td>($day.inTemp.maxtime.format("%H:%M"))</td>
+                                </tr>
+                                <tr>
+                                    <td>$Extras.Translation.low:</td>
+                                    <td>$day.inTemp.min</td>
+                                    <td>($day.inTemp.mintime.format("%H:%M"))</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                   
+                    
+
+
+                </div>
+
+                
+
+                <div class="row gutters row-gutters">
                     <div class="col col-4 crd">
 
                         <h4><i class="wi wi-humidity"></i> $Extras.Translation.out_humidity</h4>
@@ -195,75 +251,32 @@
                             </table>
                         </div>
 
-                    </div>
+                    </div>                  
+                  
+
                     <div class="col col-4 crd">
 
-                        <h4><i class="wi wi-barometer"></i> $Extras.Translation.barometer</h4>
+                        <h4><i class="wi wi-strong-wind"></i> $Extras.Translation.wind</h4>
                         <div class="crd-content">
-                            <span class="weatherdata">$current.barometer</span>
+                            <span class="weatherdata-med">$current.windSpeed</span>
                             <table class="meta">
                                 <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$day.barometer.max</td>
-                                    <td>($day.barometer.maxtime.format("%H:%M"))</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$day.barometer.min</td>
-                                    <td>($day.barometer.mintime.format("%H:%M"))</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.baro_trend ($trend.time_delta.hour):</td>
-                                    <td>$trend.barometer</td>
-                                    <td></td>
-                                </tr>
-                            </table>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="row gutters row-gutters">
-                    <div class="col col-4 crd">
-
-                        <h4><i class="wi wi-umbrella"></i> $Extras.Translation.rain</h4>
-                        <div class="crd-content">
-                            <span class="weatherdata">$day.rain.sum</span>
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.rain_rate:</td>
-                                    <td>$current.rainRate</td>
+                                    <td>$Extras.Translation.wind_avg:</td>
+                                    <td><nobr>$day.wind.avg</nobr></td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td>Hi $Extras.Translation.rain_rate:</td>
-                                    <td>$day.rainRate.max</td>
-                                    <td>($day.rainRate.maxtime.format("%H:%M"))</td>
-                                </tr>
-                            </table>
-                        </div>
-
-                    </div>
-                    <div class="col col-4 crd">
-
-                        <h4><i class="wi wi-thermometer"></i> $Extras.Translation.inside_temp</h4>
-                        <div class="crd-content">
-                            <span class="weatherdata">$current.inTemp</span>
-                            <table class="meta">
-                                <tr>
                                     <td>$Extras.Translation.high:</td>
-                                    <td>$day.inTemp.max</td>
-                                    <td>($day.inTemp.maxtime.format("%H:%M"))</td>
+                                    <td><nobr>$day.wind.max</nobr></td>
+                                    <td>($day.wind.maxtime.format("%H:%M"))</td>
                                 </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$day.inTemp.min</td>
-                                    <td>($day.inTemp.mintime.format("%H:%M"))</td>
-                                </tr>
+        
+        
                             </table>
                         </div>
-
+        
                     </div>
+                  
                     <div class="col col-4 crd">
 
                         <h4><i class="wi wi-humidity"></i> $Extras.Translation.inside_humid</h4>
@@ -284,47 +297,34 @@
                         </div>
 
                     </div>
+
+
+
+                 
+                   
                 </div>
+        
+        
+
+
+
 
             </div>
-            <div class="col col-3 crd">
 
-                <h4><i class="wi wi-strong-wind"></i> $Extras.Translation.wind</h4>
-                <div class="crd-content">
-                    <span class="weatherdata">$current.windSpeed $current.windDir.ordinal_compass <br><i class="wi wi-wind from-$current.windDir.formatted-deg"></i></span>
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.wind_avg:</td>
-                            <td>$day.wind.avg</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$day.wind.max<br> $day.wind.gustdir <i class="wi wi-wind from-$day.wind.gustdir.formatted-deg"></i></td>
-                            <td>($day.wind.maxtime.format("%H:%M"))</td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.wind_rms:</td>
-                            <td>$day.wind.rms</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.vector_avg:</td>
-                            <td>$day.wind.vecavg<br> $day.wind.vecdir <i class="wi wi-wind from-$day.wind.vecdir.formatted-deg"></i></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
 
-            </div>
+
+            
         </div>
 
-        <div class="row gutters row-gutters">
-            <div class="col col-3 crd">
 
+        <div class="row gutters row-gutters">
+         
+
+            <div class="col col-4 crd">
+        
                 <h4><i class="wi wi-windy"></i> $Extras.Translation.wind_chill</h4>
                 <div class="crd-content">
-                    <span class="weatherdata">$current.windchill</span>
+                    <span class="weatherdata-med">$current.windchill</span>
                     <table class="meta">
                         <tr>
                             <td>$Extras.Translation.low:</td>
@@ -335,11 +335,11 @@
                 </div>
 
             </div>
-            <div class="col col-3 crd">
+            <div class="col col-4 crd">
 
                 <h4><i class="wi wi-thermometer-exterior"></i> $Extras.Translation.dewpoint</h4>
                 <div class="crd-content">
-                    <span class="weatherdata">$current.dewpoint</span>
+                    <span class="weatherdata-med">$current.dewpoint</span>
                     <table class="meta">
                         <tr>
                             <td>$Extras.Translation.high:</td>
@@ -355,11 +355,11 @@
                 </div>
 
             </div>
-            <div class="col col-3 crd">
+            <div class="col col-4 crd">
 
                 <h4><i class="wi wi-fire"></i> $Extras.Translation.heat_index</h4>
                 <div class="crd-content">
-                    <span class="weatherdata">$current.heatindex</span>
+                    <span class="weatherdata-med">$current.heatindex</span>
                     <table class="meta">
                         <tr>
                             <td>$Extras.Translation.high:</td>
@@ -370,30 +370,32 @@
                 </div>
 
             </div>
-            #if $day.UV.has_data
-            <div class="col col-3 crd">
+    
 
-                <h4><i class="wi wi-fire"></i> $Extras.Translation.uv</h4>
-                <div class="crd-content">
-                    <span class="weatherdata">$current.UV</span>
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$day.UV.max</td>
-                            <td>($day.UV.maxtime.format("%H:%M"))</td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.low:</td>
-                            <td>$day.UV.min</td>
-                            <td>($day.UV.mintime.format("%H:%M"))</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            #else
-            <div class="col col-3"></div>
-            #end if
+         
+            
         </div>
+
+
+
+
+        <!-- FORECAST -->
+
+        <div class="row gutters row-gutters">
+            <div class="col col-12 crd graph-crd">
+                <a class="weatherwidget-io" href="https://forecast7.com/fr/46d81n71d21/quebec-city/" data-icons="Climacons Animated" data-mode="Forecast" data-theme="pure" >Québec, QC, Canada</a>
+                <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                
+                setInterval('__weatherwidget_init()', 3600000)
+
+                
+                </script>    
+            </div>
+        </div>        
+        
+
+
 
         <!-- GRAPHS -->
 
